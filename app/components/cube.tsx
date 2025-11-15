@@ -55,11 +55,12 @@ export function Heart() {
 
     
       // Float up and down
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.3
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.5
+      meshRef.current.position.z = Math.sin(state.clock.elapsedTime) * 0.8
     }
   })
 
   return (
-    <mesh ref={meshRef} geometry={geometry} material={material} scale={1.3} />
+    <mesh ref={meshRef} geometry={geometry} material={material} scale={0.8} />
   )
 }
