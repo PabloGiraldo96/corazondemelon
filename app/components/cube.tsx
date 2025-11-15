@@ -34,11 +34,15 @@ export function Heart() {
 
   const geometry = new THREE.ExtrudeGeometry(heartShape, extrudeSettings)
   
+  texture.wrapS = THREE.RepeatWrapping
+  texture.wrapT = THREE.RepeatWrapping
+  texture.repeat.set(0.6, 0.6)
+
   // Create material with texture
   const material = new THREE.MeshStandardMaterial({ 
     map: texture,
     side: THREE.DoubleSide,
-    metalness: 0.2,
+    metalness: 0.002,
     roughness: 0.002
   })
 
